@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 18th Birthday Celebration!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+    }
+    .container {
+      text-align: center;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 600px;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #e74c3c;
+      animation: fadeIn 2s ease-in-out;
+    }
+    p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+    button {
+      padding: 15px 30px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin: 10px;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .cake {
+      width: 200px;
+      margin: 20px auto;
+    }
+    .candle {
+      position: relative;
+      width: 30px;
+      height: 100px;
+      background-color: #f39c12;
+      margin: 20px auto;
+      border-radius: 5px 5px 0 0; /* Round the top corners */
+    }
+    .flame {
+      position: absolute;
+      top: -20px; /* Position the flame above the candle */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      background-color: #e74c3c; /* Flame color */
+      border-radius: 50%; /* Make it circular */
+      box-shadow: 0 0 5px rgba(231, 76, 60, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the 18th Birthday Celebration! 🎉</h1>
+    <p>Get ready for a day full of laughter and fun!</p>
+    <button onclick="showPage('page1')">Start Celebration</button>
+    
+    <div id="page1" class="hidden">
+      <h1>Happy 18th Birthday!</h1>
+      <p>Welcome to adulthood! Remember, I'm always watching you & I always love you 🐥. And cake!</p>
+      <img src="https://img.icons8.com/ios/452/birthday-cake.png" alt="Birthday Cake" class="cake" />
+      <button onclick="showPage('page2')">Funny Wishes</button>
+    </div>
+    
+    <div id="page2" class="hidden">
+      <h1>Birthday Wishes, you little 🐥🐬</h1>
+      <p>At 18, you can now do everything you wanted... except for your homework!</p>
+      <p>Remember, you're not getting older, just more distinguished! (And maybe a little creakier...)</p>
+      <button onclick="showPage('page3')">Make a Wish!</button>
+    </div>
+
+    <div id="page3" class="hidden">
+      <h1>Make a Wish!</h1>
+      <p>Blow out the candle and let your dreams take flight! 🕯️</p>
+      <div class="candle">
+        <div class="flame"></div>
+      </div>
+      <button onclick="showPage('page4')">Surprise!</button>
+    </div>
+
+    <div id="page4" class="hidden">
+      <h1>🎉 Happy 18th Birthday, Shivani! 🎉</h1>
+      <p>18 ayallo. Ini ippo naan safe alle 🫣🫣. Engane und neee happy allleeeeeeyeeee 💓💓💓💓💓💓</p>
+      <p>Here's to a fabulous year ahead!</p>
+      <button onclick="showPage('page0')">Back to Start</button>
+    </div>
+  </div>
+
+  <script>
+    const pages = document.querySelectorAll('.hidden');
+
+    function showPage(pageId) {
+      pages.forEach(page => {
+        if (page.id === pageId) {
+          page.classList.toggle('hidden');
+        } else {
+          page.classList.add('hidden');
+        }
+      });
+    }
+
+    document.querySelectorAll('.hidden').forEach(page => {
+      page.classList.add('hidden');
+    });
+  </script>
+
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</body>
+</html>
